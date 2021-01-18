@@ -1,0 +1,81 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.game-wrapper {
+  border-bottom: 4px solid grey;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  bottom: 50%;
+  overflow: hidden;
+}
+
+.dinosaur {
+  width: 120px;
+  position: absolute;
+  bottom: 0;
+  left: 15px;
+}
+
+.jump {
+  animation: jump 1s;
+}
+
+.move {
+  animation: move 3s infinite ease-in-out;
+}
+
+.cactus {
+  width: 80px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+input {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  width: 40px;
+  border: 3px inset red;
+  border-radius: 15px;
+  text-align: center;
+}
+
+@keyframes jump {
+  0% {
+    bottom: 0;
+  }
+  50% {
+    bottom: 150px;
+  }
+  100% {
+    bottom: 0;
+  }
+}
+
+@keyframes move {
+  0% {
+    right: -20%;
+  }
+  100% {
+    right: 120%;
+  }
+}
+/*# sourceMappingURL=style.css.map */
